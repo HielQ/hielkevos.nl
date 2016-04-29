@@ -2,7 +2,7 @@
 
 @section('header')
 
-    <img src="/assets/image/headers/project.jpg"/>
+
 
     <h1><i class="fa fa-folder"></i>{{trans('header.project')}}</h1>
 
