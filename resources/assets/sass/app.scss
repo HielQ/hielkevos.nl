@@ -1,0 +1,378 @@
+
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+@import url("//fonts.googleapis.com/css?family=Titillium+Web:700,600,400,300,200");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
+$base: #8CD5FF;
+$header: #2196F3;
+$headerHighlight: #00BCD4;
+$text: #385665;
+$transTime: 250ms;
+
+
+// Override the stupid bootstrap code
+.nav>li>a:hover,
+.nav>li>a:focus {
+  background-color: inherit;
+  color: inherit;
+}
+// ----------------------------------
+
+@-webkit-keyframes headerBrandHover {
+  100% {
+    text-shadow: 2px 2px rgba(100,100,100,0.4);
+  }
+}
+@keyframes headerBrandHover {
+  100% {
+    text-shadow: 2px 2px rgba(100,100,100,0.4);
+  }
+}
+
+@-webkit-keyframes headerNavHover {
+  0% {
+    color: white;
+    background-color: $header;
+  }
+  100% {
+    color: white;
+    background-color: $headerHighlight;
+  }
+}
+@keyframes headerNavHover {
+  0% {
+    color: white;
+    background-color: $header;
+  }
+  100% {
+    color: white;
+    background-color: $headerHighlight;
+  }
+}
+
+html, body {
+  font-family: "Titillium Web", sans-serif;
+  color: $text;
+  position: relative;
+  background-image: url('/assets/image/bg.png');
+  background-repeat: repeat;
+  margin: 0 auto;
+  padding: 0 !important;
+  font-size: medium;
+  min-width: 325px;
+
+  & > .content {
+    background-color: white;
+    padding: 0 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    margin-bottom: 100px;
+
+    a {
+      color: #3F51B5;
+    }
+  }
+}
+
+// Make the social buttons larger than the normal nav buttons
+@media (max-width: 1200px) {
+  .header .header-social {
+    font-size: 24px;
+  }
+}
+
+.header-image {
+  max-height: 300px;
+  overflow: hidden;
+  position: relative;
+
+  & > img {
+    min-height: 300px;
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    margin-left: -960px;
+  }
+
+  & > h1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;//#00BCD4;
+    text-shadow: 0 0 5px #000;
+    font-size: 100px;
+    font-weight: 100;
+  }
+}
+
+.footer {
+  background-color: $header;
+  color: white !important;
+  text-align: center;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+
+  hr {
+    margin-top: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  span {
+    font-size: 15px;
+  }
+
+  a {
+    color: white !important;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.navbar-luna {
+  background-color: $header;
+  margin: 0;
+  border-bottom: none;
+  min-height: 100px;
+
+  // Brand and expand buttons
+  & .navbar-header {
+
+    & .navbar-brand {
+      color: white;
+      font-size: 25px;
+      line-height: 40px;
+      height: 100px;
+      padding: 30px 15px;
+
+
+
+      &:hover {
+        animation: headerBrandHover $transTime;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation: headerBrandHover $transTime;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: forwards;
+      }
+      img {
+        height:50px;
+        width:50px;
+      }
+    }
+
+    & .navbar-toggle {
+      border-color: white;
+      margin-top: 25px;
+      margin-right: 25px;
+      padding: 15px;
+
+      & .icon-bar {
+        background-color: white;
+      }
+
+      &:hover {
+        border-color: $header;
+        background-color: $headerHighlight;
+
+        & .icon-bar {
+          background-color: $header;
+        }
+      }
+    }
+  }
+
+  // Nav buttons
+  & .navbar-nav {
+    & .active > a {
+      color: white;
+      background-color: $headerHighlight;
+
+      &:hover,
+      &:active,
+      &:focus {
+        animation: none;
+        -webkit-animation: none;
+      }
+    }
+
+    & a {
+      color: white;
+      background-color: $header;
+      border-left: 1px solid white;
+      line-height: 40px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      height: 100px;
+
+      &:hover,
+      &:focus {
+        animation: headerNavHover $transTime;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation: headerNavHover $transTime;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: forwards;
+      }
+    }
+
+    .dropdown .dropdown-menu {
+      color: white;
+      background-color: $header;
+
+      a {
+        border-left: none;
+        line-height: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        height: 100%;
+
+        &:hover {
+          color: white;
+          background-color: $header;
+        }
+      }
+    }
+  }
+
+  .header-social {
+    font-size: 36px;
+
+    li a {
+      border-left: none;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+}
+
+// Phablet
+@media only screen and (max-width: 767px) {
+  .header-image > h1 {
+    font-size: 50px;
+  }
+
+  .navbar-luna .navbar-nav {
+    li a {
+      border-left: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 20px;
+      height: inherit;
+    }
+
+    .dropdown .dropdown-menu a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+// Bootstrap sidebar navigation
+
+.sidebar.affix {
+  position: static
+}
+
+.sidenav {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
+.sidebar .nav > li > a {
+  display: block;
+  padding: 4px 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #607D8B;
+}
+
+.sidebar .nav > li > a:hover,
+.sidebar .nav > li > a:focus {
+  padding-left: 19px;
+  color: $header;
+  text-decoration: none;
+  background-color: transparent;
+  border-left: 1px solid $header;
+}
+
+.sidebar .nav > .active > a,
+.sidebar .nav > .active:hover > a,
+.sidebar .nav > .active:focus > a {
+  padding-left: 18px;
+  font-weight: 600;
+  color: $header;
+  background-color: transparent;
+  border-left: 2px solid $header;
+}
+
+.sidebar .nav .nav {
+  display: none;
+  padding-bottom: 10px
+}
+
+.sidebar .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: 400
+}
+
+.sidebar .nav .nav > li > a:hover,
+.sidebar .nav .nav > li > a:focus {
+  padding-left: 29px
+}
+
+.sidebar .nav .nav > .active > a,
+.sidebar .nav .nav > .active:hover > a,
+.sidebar .nav .nav > .active:focus > a {
+  padding-left: 28px;
+  font-weight: 400;
+}
+
+// Laptop & desktop
+@media (min-width: 768px) {
+  .sidebar {
+    padding-left: 20px
+  }
+}
+
+// Desktop
+@media (min-width: 992px) {
+  .sidebar .nav > .active > ul {
+    display: block
+  }
+
+  .sidebar.affix, .sidebar.affix-bottom {
+    width: 213px
+  }
+
+  .sidebar.affix {
+    position: fixed;
+    top: 20px
+  }
+
+  .sidebar.affix-bottom {
+    position: absolute
+  }
+
+  .sidebar.affix-bottom .sidenav, .sidebar.affix .sidenav {
+    margin-top: 0;
+    margin-bottom: 0
+  }
+}
+
+// Large desktop
+@media (min-width: 1200px) {
+  .sidebar.affix-bottom, .sidebar.affix {
+    width: 263px
+  }
+}
+
+
