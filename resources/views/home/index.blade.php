@@ -133,7 +133,7 @@
         function getMusicData() {
             //Get the top 5 albums
             $.ajax({
-                url: "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=duckthom&api_key=4540282aa7e002408e12ad79f027d8b9&format=json&period=1month&limit=5",
+                url: "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=HielQ&api_key=f75aac90214b47ed5027a78c6947697e&format=json&period=1month&limit=5",
                 dataType: "json",
                 method: "GET",
                 async: true,
@@ -167,7 +167,7 @@
             });
             // Get the top 5 tracks of the past month
             $.ajax({
-                url: "https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=duckthom&api_key=4540282aa7e002408e12ad79f027d8b9&format=json&period=1month&limit=5",
+                url: "https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=HielQ&api_key=f75aac90214b47ed5027a78c6947697e&format=json&period=1month&limit=5",
                 dataType: "json",
                 method: "GET",
                 async: true,
@@ -201,7 +201,7 @@
             });
             // Get the current track
             $.ajax({
-                url: "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=DuckThom&api_key=4540282aa7e002408e12ad79f027d8b9&format=json&limit=1",
+                url: "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=HielQ&api_key=f75aac90214b47ed5027a78c6947697e&format=json&limit=1",
                 dataType: "json",
                 method: "GET",
                 async: true,
