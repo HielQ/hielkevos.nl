@@ -242,7 +242,7 @@
                         $("#track").html(trackName);
                         $("#artist").html(artistName);
                         $("#album").html(albumName);
-
+                        $("#album-art").css('background-image', "url(" + albumArt + ")");
                     }
                 },
                 error: function (xhr, textStatus, errorThrown) {
