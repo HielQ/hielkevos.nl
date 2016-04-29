@@ -6,7 +6,7 @@
 
 @section('header')
     <img src="/assets/image/headers/licenses.jpg">
-    <h1>{{trans('header.licenses')}}</h1>
+    <h1><i class="fa fa-gavel"></i>{{trans('header.licenses')}}</h1>
 @stop
 
 @section('content')

@@ -4,7 +4,7 @@
 
     <img src="/assets/image/headers/project.jpg"/>
 
-    <h1>{{trans('header.project')}}</h1>
+    <h1><i class="fa fa-folder"></i>{{trans('header.project')}}</h1>
 
     @stop
 

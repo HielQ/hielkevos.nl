@@ -4,7 +4,7 @@
 @section('header')
     <img src="/assets/image/headers/music.jpg"/>
 
-    <h1>{{trans('header.music')}}</h1>
+    <h1><i class="fa fa-music"></i>{{trans('header.music')}}</h1>
 @stop
 
 @section('content')

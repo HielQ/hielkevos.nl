@@ -2,7 +2,7 @@
 
 @section('header')
     <img src="/assets/image/headers/home.jpg"/>
-    <h1>Hielkevos.nl</h1>
+    <h1><i class="fa fa-home"></i>Hielkevos.nl</h1>
 
     @stop
 
