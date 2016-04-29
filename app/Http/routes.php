@@ -54,8 +54,8 @@ Route::group(['prefix' => 'f'] , function () {
 });
 
 Route::get('/' , 'HomeController@index');
-Route::get('/about' , 'HomeController@about');
-//Route::get('/music' , 'HomeController@music');
+//Route::get('/about' , 'HomeController@about');
+Route::get('/music' , 'HomeController@music');
 //Route::get('/games' , 'HomeController@games');
 Route::get('/projects' , 'HomeController@projects');
 Route::get('/licenses' , 'HomeController@licenses');
