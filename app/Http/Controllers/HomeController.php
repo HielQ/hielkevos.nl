@@ -90,5 +90,9 @@ class HomeController extends Controller
         return view('home.clock');
     }
 
+    public function contact() {
+        return view('home.contact');
+    }
+
 
 }
