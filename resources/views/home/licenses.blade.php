@@ -11,7 +11,7 @@
 
 @section('content')
     <div class="text-center">
-    <h2><a href="http://laravel.com" target="_blank">Laravel</a> by <a href="https://github.com/taylorotwell" target="_blank">Taylor Otwell</a> <small>(<a href="https://github.com/laravel/framework/blob/4.2/LICENSE.txt" target="_blank">license</a>)</small></h2>
+    <h2><a href="http://laravel.com" target="_blank">Laravel</a> by <a href="https://github.com/taylorotwell" target="_blank">Taylor Otwell</a> <small>(<a href="https://github.com/laravel/framework/blob/5.2/LICENSE.txt" target="_blank">license</a>)</small></h2>
     <br />
     <pre class="text-left">
                         The MIT License (MIT)
