@@ -60,7 +60,7 @@ Route::get('/music' , 'HomeController@music');
 Route::get('/projects' , 'HomeController@projects');
 Route::get('/licenses' , 'HomeController@licenses');
 Route::get('/clock' , 'HomeController@clock');
-Route::get('/contact' , 'HomeController@contact');
+//Route::get('/contact' , 'HomeController@contact');
 
 //Route::get('upload' , ['middleware' => 'auth' , 'uses' => 'FileController@index']);
 //Route::get('logout' , ['middleware' => 'auth' , 'uses' => 'UserController@logout']);
