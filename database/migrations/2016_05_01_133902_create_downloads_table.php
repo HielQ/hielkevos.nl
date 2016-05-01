@@ -12,9 +12,8 @@ class CreateDownloadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('downloads ' , function(Blueprint $table)
-        {
-           $table->increments('id');
+        Schema::create('downloads' , function(Blueprint $table) {
+            $table->increments('id');
             $table->string('name');
             $table->string('hash');
             $table->timestamps();
@@ -28,6 +27,6 @@ class CreateDownloadsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Downloads');
+        Schema::drop('downloads');
     }
 }

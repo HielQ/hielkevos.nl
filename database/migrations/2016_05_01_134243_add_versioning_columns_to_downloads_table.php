@@ -12,12 +12,11 @@ class AddVersioningColumnsToDownloadsTable extends Migration
      */
     public function up()
     {
-        Schema::table('downloads' , function(Blueprint $table)
-        {
+        Schema::table('downloads' , function(Blueprint $table){
            $table->string('version')->default('0.0.0');
-            $table->string('author');
-            $table->string('descr', 300);
-            $table->string('path');
+           $table->string('author');
+           $table->string('descr' , 300);
+           $table->string('path');
         });
     }
 
@@ -28,9 +27,7 @@ class AddVersioningColumnsToDownloadsTable extends Migration
      */
     public function down()
     {
-        Schema::table('downloads' , function(Blueprint $table)
-        {
-
+        Schema::table('downloads' , function(Blueprint $table) {
             $table->dropColumn('version');
             $table->dropColumn('author');
             $table->dropColumn('descr');
