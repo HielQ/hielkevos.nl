@@ -132,7 +132,8 @@
               </div>
               <div class="col-md-4 col-xs-6">
                   <p class="lead"><i class="fa fa-gavel"></i> {{trans('footer.licenses')}}</p>
-                  {{trans('footer.license_text')}}
+                  This website is licensed under the <a href="https://github.com/HielQ/hielkevos.nl/blob/master/LICENSE">MIT License</a><br />
+                  The other licenses can be found <a href="/licenses">here</a>
               </div>
           </div>
       </footer>

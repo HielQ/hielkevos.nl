@@ -4,6 +4,7 @@ return [
 
     'copyright' => 'Copyright',
     'powerdby' => 'Powered by',
-    'licenses' => 'Licenses'
+    'licenses' => 'Licenses' ,
+    'license_text' => 'This website is licensed under the'
 
 ];
