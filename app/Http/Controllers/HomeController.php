@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+
 
 class HomeController extends Controller
 {
@@ -21,9 +23,11 @@ class HomeController extends Controller
 
     public function music()
     {
-        $dt = new \DateTime();
 
-        return view ('home.music', ['month' => $dt->format('F')]);
+
+        return view ('home.music', [
+            'lastmonth' => Carbon::parse('-1 month')->format('F jS')
+        ]);
     }
 
     public function games()

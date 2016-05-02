@@ -22,7 +22,7 @@
 
         <table class="font-light" id="topAlbumsTable">
             <caption>
-                <h3 class="font-light">Top 5 Albums ({{ $month }})</h3>
+                <h3 class="font-light">Top 5 Albums ({{ $lastmonth }} to today) </h3>
             </caption>
 
             <thead>
@@ -41,7 +41,7 @@
 
         <table class="font-light" id="topTrackTable">
             <caption>
-                <h3 class="font-light">Top 5 Tracks ({{ $month }})<h3>
+                <h3 class="font-light">Top 5 Tracks ({{ $lastmonth }} to today)<h3>
             </caption>
 
             <thead>
