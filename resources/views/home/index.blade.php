@@ -11,6 +11,8 @@
    <div class="text-center">
        <p id="aboutSite">
            {{trans('home.aboutme')}}
+           <br />
+           {{trans('home.about_made')}}
        </p>
    </div>
 
