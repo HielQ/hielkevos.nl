@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="'en">
+<html lang="{{app()->getLocale() }}">
 
  <head>
      <title> Hielke Vos @if(Request::path() !== '/') | {{ucfirst(Request::path())}} @endif</title>
@@ -58,7 +58,33 @@
                   <li><a href="https://steamcommunity.com/id/HielQ" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Steam"><i class="fa fa-steam"></i></a></li>
                   <li><a href="https://facebook.com/hielke.vos" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                   <li><a href="https://www.last.fm/user/HielQ" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Lastfm"><i class="fa fa-lastfm"></i></a></li>
+                  <li class="dropdown">
+                      <a class="{{ isset($button) ? 'btn btn-default' : '' }} dropdown-toggle" href="#" id="language-dropdown" data-toggle='dropdown' aria-expanded='false' aria-haspopup='true'>
+                          {{ App\Helpers\LocaleHelper::localeToString(App::getLocale()) }}
+                          <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="language-dropdown">
+                          <li>
+                              <a role="menuitem" href="{{ url('language/en') }}">
+                                  <img class="flag" src="{{ asset('assets/images/flags/en.png') }}"/>{{ trans('language.English') }}
+                              </a>
+                          </li>
+                          <li>
+                              <a role="menuitem" href="{{ url('language/nl') }}">
+                                  <img class="flag" src="{{ asset('assets/images/flags/nl.png') }}"/>{{ trans('language.Dutch') }}
+                              </a>
+                          </li>
+                          <li>
+                              <a role="menuitem" href="{{ url('language/nl') }}">
+                                  <img class="flag" src="{{ asset('assets/images/flags/nl.png') }}"/>{{ trans('language.Dutch') }}
+                              </a>
+                          </li>
+
+                  </li>
+                          </ul>
               </ul>
+
+
           </div>
       </div>
   </nav>
@@ -143,6 +169,8 @@
 
 
   <script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
   @yield('extraJS')
 
   </body>

@@ -53,14 +53,7 @@ Route::group(['prefix' => 'f'] , function () {
     Route::get('{version}/{name}' , 'FileCOntroller@serve');
 });
 
-Route::get('/' , 'HomeController@index');
-//Route::get('/about' , 'HomeController@about');
-Route::get('/music' , 'HomeController@music');
-//Route::get('/games' , 'HomeController@games');
-Route::get('/projects' , 'HomeController@projects');
-Route::get('/licenses' , 'HomeController@licenses');
-Route::get('/clock' , 'HomeController@clock');
-//Route::get('/contact' , 'HomeController@contact');
+
 
 //Route::get('upload' , ['middleware' => 'auth' , 'uses' => 'FileController@index']);
 //Route::get('logout' , ['middleware' => 'auth' , 'uses' => 'UserController@logout']);
@@ -70,6 +63,16 @@ Route::get('/clock' , 'HomeController@clock');
 //Route::match(['GET' , 'POST'] , '/login' , 'UserController@login');
 
 
-Route::group(['middleware' => ['web']], function () {
-    //
+Route::group(['middleware' => ['web' , 'locale']], function () {
+    route::get('language/{locale}' , 'SessionController@saveLocale');
+
+    Route::get('/' , 'HomeController@index');
+//Route::get('/about' , 'HomeController@about');
+    Route::get('/music' , 'HomeController@music');
+//Route::get('/games' , 'HomeController@games');
+    Route::get('/projects' , 'HomeController@projects');
+    Route::get('/licenses' , 'HomeController@licenses');
+    Route::get('/clock' , 'HomeController@clock');
+//Route::get('/contact' , 'HomeController@contact');
+
 });
