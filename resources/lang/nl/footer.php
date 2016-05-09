@@ -2,9 +2,9 @@
 
 return [
 
-    'copyright' => 'Copyright',
+    'copyright' => 'Auteursrecht',
     'powerdby' => 'Powered by',
-    'licenses' => 'Licenses' ,
+    'licenses' => 'Licenties' ,
     'license_text' => 'This website is licensed under the'
 
 ];

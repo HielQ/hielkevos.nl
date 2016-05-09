@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'loading' => 'loading',
+    'loading' => 'Laden',
 
 ];

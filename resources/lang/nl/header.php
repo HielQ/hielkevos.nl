@@ -1,9 +1,9 @@
 <?php
 return [
 
-    'about' => 'About myself',
-    'project' => 'Projects',
-    'music' => 'Music' ,
-    'licenses' => 'Licenses'
+    'about' => 'Over mezelf',
+    'project' => 'Projecten',
+    'music' => 'Muziek' ,
+    'licenses' => 'Licenties'
 
 ];

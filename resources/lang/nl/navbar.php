@@ -5,11 +5,11 @@ return [
     'home' => 'Home',
     'about' => 'About',
     'games' => 'Games',
-    'projects' => 'Projects' ,
-    'music' => 'Music' ,
-    'login' => 'Login' ,
-    'licenses' => 'Licenses' ,
-    'clock' => 'Clock' ,
+    'projects' => 'Projecten' ,
+    'music' => 'Muziek' ,
+    'login' => 'Inloggen' ,
+    'licenses' => 'Licenties' ,
+    'clock' => 'Klok' ,
 
 
 ];

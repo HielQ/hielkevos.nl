@@ -66,12 +66,12 @@
                       <ul class="dropdown-menu" role="menu" aria-labelledby="language-dropdown">
                           <li>
                               <a role="menuitem" href="{{ url('language/en') }}">
-                                  <img class="flag" src="{{ asset('assets/flags/en.png') }}"/>{{ trans('language.English') }}
+                                  <img class="flag" src="{{ asset('assets/flags/en.png') }}"/>{{ trans('language.english') }}
                               </a>
                           </li>
                           <li>
                               <a role="menuitem" href="{{ url('language/nl') }}">
-                                  <img class="flag" src="{{ asset('assets/flags/nl.png') }}"/>{{ trans('language.Dutch') }}
+                                  <img class="flag" src="{{ asset('assets/flags/nl.png') }}"/>{{ trans('language.dutch') }}
                               </a>
                           </li>
 
