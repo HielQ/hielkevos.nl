@@ -69,16 +69,14 @@
                                   <img class="flag" src="{{ asset('assets/flags/en.png') }}"/>{{ trans('language.english') }}
                               </a>
                           </li>
-                          <li>
+                    {{--     <li>
                               <a role="menuitem" href="{{ url('language/nl') }}">
                                   <img class="flag" src="{{ asset('assets/flags/nl.png') }}"/>{{ trans('language.dutch') }}
                               </a>
-                          </li>
+                          </li> --}}
 
-                  </li>
                           </ul>
               </ul>
-
 
           </div>
       </div>
