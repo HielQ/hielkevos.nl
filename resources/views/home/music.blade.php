@@ -22,13 +22,13 @@
 
         <table class="font-light" id="topAlbumsTable">
             <caption>
-                <h3 class="font-light">Top 5 Albums ({{ $lastmonth }} to today) </h3>
+                <h3 class="font-light">Top 5 Albums ({{ $lastmonth }} {{trans('music.today')}}) </h3>
             </caption>
 
             <thead>
             <tr>
                 <th class="font-medium">
-                    Artist
+                    {{trans('music.artist')}}
                 </th>
                 <th class="font-medium">
                     Album
@@ -41,16 +41,16 @@
 
         <table class="font-light" id="topTrackTable">
             <caption>
-                <h3 class="font-light">Top 5 Tracks ({{ $lastmonth }} to today)<h3>
+                <h3 class="font-light">Top 5 {{trans('music.tracks')}} ({{ $lastmonth }} {{trans('music.today')}})</h3>
             </caption>
 
             <thead>
             <tr>
                 <th class="font-medium">
-                    Artist
+                    {{trans('music.artist')}}
                 </th>
                 <th class="font-medium">
-                    Track
+                    {{trans('music.track')}}
                 </th>
             </tr>
             </thead>
@@ -175,7 +175,7 @@
                                 albumName +
                                 "</a> (" +
                                 playcount +
-                                (playcount === "1" ? " play" : " plays") +
+                                (playcount === "1" ? " {{trans('music.play')}}" : " {{trans('music.plays')}}") +
                                 ")</td></tr>";
                     }
                     $("#topAlbums").html(text);
@@ -209,7 +209,7 @@
                                 trackName +
                                 "</a> (" +
                                 playcount +
-                                (playcount === "1" ? " play" : " plays") +
+                                (playcount === "1" ? "{{trans('music.play')}}" : " {{trans('music.plays')}}") +
                                 ")</td></tr>";
                     }
                     $("#topTracks").html(text);
@@ -228,10 +228,10 @@
                     var track = data.recenttracks.track[0];
                     if (typeof track['@attr'] != "undefined") {
                         // This code will be used if the user is currenly listening to something
-                        var prefix = "<div class='sp sp-wave'></div> &nbsp; Now playing";
+                        var prefix = "<div class='sp sp-wave'></div> &nbsp; {{trans('music.playing')}}";
                     } else {
                         // If the user is not listening to anything, show the latest track that they listened to
-                        var prefix = "<i class='fa fa-pause'></i> &nbsp; Recently played";
+                        var prefix = "<i class='fa fa-pause'></i> &nbsp; {{trans('music.recently')}}";
                     }
                     var trackName = track.name;
                     var artistName = track.artist['#text'];
