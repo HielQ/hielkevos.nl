@@ -22,22 +22,22 @@
                 <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="project-header">
-                        <h3><i class="fa {{$project->fork ? 'fa-code-fork' : 'fa-github'}}"></i> {{$project->name}} <small>(<a href="{{$project->html_url}}" target="_blank">source</a>)</small></h3>
+                        <h3><i class="fa {{$project->fork ? 'fa-code-fork' : 'fa-github'}}"></i> {{$project->name}} <small>(<a href="{{$project->html_url}}" target="_blank">{{trans('project.source')}}</a>)</small></h3>
                     </div>
 
                     <div class="row text-left">
                         <div class="col-md-5">
                             <table class="table table-condensed">
                                 <tr>
-                                    <td><strong><i class="fa fa-file-code-o"></i> Language </strong></td>
+                                    <td><strong><i class="fa fa-file-code-o"></i> {{trans('project.language')}}</strong></td>
                                     <td>{{$project->language}}</td>
                                 </tr>
                                 <tr>
-                                    <td><strong><i class="fa fa-clock-o"></i>Created</strong></td>
+                                    <td><strong><i class="fa fa-clock-o"></i>{{trans('project.created')}}</strong></td>
                                     <td>{{ $created_at->format('Y-m-d H:i:s') }}</td>
                                 </tr>
                                 <tr>
-                                    <td><strong><i class="fa fa-clock-o"></i>Updated </strong></td>
+                                    <td><strong><i class="fa fa-clock-o"></i>{{trans('project.updated')}}</strong></td>
                                     <td>{{ $updated_at->format('Y-m-d H:i:s' ) }}</td>
                                 </tr>
                             </table>
