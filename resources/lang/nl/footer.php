@@ -5,6 +5,8 @@ return [
     'copyright' => 'Auteursrecht',
     'powerdby' => 'Powered by',
     'licenses' => 'Licenties' ,
-    'license_text' => 'This website is licensed under the'
+    'license_text' => 'Deze website valt onder de' ,
+    'license_text2' => 'De overige licenties staan in deze ' ,
+    'link' => 'link'
 
 ];

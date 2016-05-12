@@ -9,5 +9,10 @@ return [
     'image_list' => 'Foto lijst' ,
     'image_overview' => 'Foto overzicht' ,
     'file_list' => 'Bestanden lijst',
-    'logout' => 'Uitloggen'
+    'logout' => 'Uitloggen' ,
+    'username' => 'Gebruikersnaam',
+    'username_text' => 'Voer hier uw gebruikersnaam in',
+    'password' => 'Wachtwoord' ,
+    'password_text' => 'Voer hier uw wachtwoord in',
+    'signin' => "Aanmelden"
 ];

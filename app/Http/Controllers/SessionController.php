@@ -19,7 +19,11 @@ class SessionController extends Controller
         // Prevent the app from showing a message in the previous locale
         app()->setLocale($locale);
 
-        return back()->with('message', trans('messages.changedLocale'));
+        return back()->with([
+            'type' => 'success',
+            'message' => trans('message.changedlocale'),
+            'glyphicon' => 'glyphicon glyphicon-ok'
+        ]);
     }
 
 

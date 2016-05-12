@@ -92,7 +92,9 @@
               <br />
 
               @if(Session::has('message'))
-                  <div class="alert alert - {{ Session::get('type') }}"> {{Session::get('message')}}</div>
+                  <div class="alert alert-{{ Session::get('type') }}">
+                      <span class="{{Session::get('glyphicon')}}" aria-hidden="true"></span>
+                      {{Session::get('message')}}</div>
                   @endif
 
               @yield('content')
@@ -122,7 +124,7 @@
                           <br />
                           <li><a href="/logout"><i class="fa fa-user"></i>{{trans('home.logout')}}</a></li>
                       @else
-                      <li @if(Request::path() === 'login') class="active" @endif><a href="/login"><i class="fa fa-user"></i>{{trans('navbar.login')}}</a></li>
+                   {{--   <li @if(Request::path() === 'login') class="active" @endif><a href="/login"><i class="fa fa-user"></i>{{trans('navbar.login')}}</a></li> --}}
 
                           @endif
 
@@ -151,8 +153,8 @@
               </div>
               <div class="col-md-4 col-xs-6">
                   <p class="lead"><i class="fa fa-gavel"></i> {{trans('footer.licenses')}}</p>
-                  This website is licensed under the <a href="https://github.com/HielQ/hielkevos.nl/blob/master/LICENSE">MIT License</a><br />
-                  The other licenses can be found <a href="/licenses">here</a>
+                  {{trans('footer.license_text')}} <a href="https://github.com/HielQ/hielkevos.nl/blob/master/LICENSE">MIT License</a><br />
+                  {{trans('footer.license_text2')}} <a href="/licenses">{{trans('footer.link')}}</a>
               </div>
           </div>
       </footer>

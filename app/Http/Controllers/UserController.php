@@ -25,11 +25,22 @@ class UserController extends Controller
                 else
                     return Redirect::to('/login')->with(
                         [
-                            'message' => 'Invalid username and or password'
+                            'type' => 'danger',
+                            'message' => trans('error.login'),
+                            'glyphicon' => 'glyphicon glyphicon-exclamation-sign'
                         ]
                     );
             } else
-                return Redirect::to('/login')->withInput(Input::except('password'));
+                return Redirect::to('/login')
+                    ->with(
+                        [
+                            'type' => 'danger' ,
+                            'message' => trans('error.missing'),
+                            'glyphicon' => 'glyphicon glyphicon-exclamation-sign'
+
+                        ]
+                    )
+                    ->withInput(Input::except('password'));
         } else
             return Redirect::to('/');
     }
@@ -41,7 +52,7 @@ class UserController extends Controller
             Auth::logout();
             return Redirect::intended('/')->with(
                 [
-                    'message' => 'Logout succesfull' , 'type' => 'success'
+                    'message' => 'Logout successfull' , 'type' => 'success'
                 ]
             );
         } else

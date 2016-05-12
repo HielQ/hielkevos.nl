@@ -9,5 +9,10 @@ return [
     'image_list' => 'Image list' ,
     'image_overview' => 'Image overview' ,
     'file_list' => 'File list' ,
-    'logout' , 'Logout'
+    'logout' , 'Logout' ,
+    'username' => 'Username' ,
+    'username_text' => 'Enter your username',
+    'password' => 'Password' ,
+    'password_text' => 'Enter your password',
+    'signin' => 'Sign in'
 ];
