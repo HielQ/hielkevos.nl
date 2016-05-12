@@ -5,7 +5,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 
-use Input;
+use Input, Auth;
 
 class UserController extends Controller
 {

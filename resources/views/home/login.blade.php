@@ -13,14 +13,14 @@
 
                 <div class="form-group">
                     <label>Login</label>
-                    <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Username" value="{{ (Session::has('username') ? Session::get('username') : '') }}">
+                    <input type="text" name="username" class="form-control" id="inputUsername" placeholder="{{trans('home.username')}}" value="{{ (Session::has('username') ? Session::get('username') : '') }}">
                 </div>
 
                 <br />
 
                 <div class="form-group">
                     <label>Password</label>
-                     <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
+                     <input type="password" name="password" class="form-control" id="inputPassword" placeholder="{{trans('home.password')}}">
                 </div>
 
                 <br />

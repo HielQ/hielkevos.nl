@@ -69,11 +69,11 @@
                                   <img class="flag" src="{{ asset('assets/flags/en.png') }}"/>{{ trans('language.english') }}
                               </a>
                           </li>
-                    {{--     <li>
+                        <li>
                               <a role="menuitem" href="{{ url('language/nl') }}">
                                   <img class="flag" src="{{ asset('assets/flags/nl.png') }}"/>{{ trans('language.dutch') }}
                               </a>
-                          </li> --}}
+                          </li>
 
                           </ul>
               </ul>
@@ -113,16 +113,16 @@
                       <br />
 
                       @if(Auth::check())
-                          <li @if( Request::path() === 'upload' ) class="active" @endif><a href="/upload"><i class="fa fa-upload"></i> Upload</a></li>
+                          <li @if( Request::path() === 'upload' ) class="active" @endif><a href="/upload"><i class="fa fa-upload"></i>{{trans('home.upload')}}</a></li>
                           <br />
-                          <li @if( Request::path() === 's/list' ) class="active" @endif><a href="/s/list"><i class="fa fa-list"></i> Image list</a></li>
-                          <li @if( Request::path() === 's/overview' ) class="active" @endif><a href="/s/overview"><i class="fa fa-th"></i> Image overview</a></li>
+                          <li @if( Request::path() === 's/list' ) class="active" @endif><a href="/s/list"><i class="fa fa-list"></i>{{trans('home.image_list')}}</a></li>
+                          <li @if( Request::path() === 's/overview' ) class="active" @endif><a href="/s/overview"><i class="fa fa-th"></i>{{trans('home.image_overview')}}</a></li>
                           <br />
-                          <li @if( Request::path() === 'f/list' ) class="active" @endif><a href="/f/list"><i class="fa fa-list"></i> File list</a></li>
+                          <li @if( Request::path() === 'f/list' ) class="active" @endif><a href="/f/list"><i class="fa fa-list"></i>{{trans('home.file_list')}}</a></li>
                           <br />
-                          <li><a href="/logout"><i class="fa fa-user"></i> Logout</a></li>
+                          <li><a href="/logout"><i class="fa fa-user"></i>{{trans('home.logout')}}</a></li>
                       @else
-                    {{--  <li @if(Request::path() === 'login') class="active" @endif><a href="/login"><i class="fa fa-user"></i>{{trans('navbar.login')}}</a></li> --}}
+                      <li @if(Request::path() === 'login') class="active" @endif><a href="/login"><i class="fa fa-user"></i>{{trans('navbar.login')}}</a></li>
 
                           @endif
 
