@@ -8,17 +8,17 @@
 
 @section('content')
     <div class="text-center">
-        <p class="lead">Seconds</p>
+        <p class="lead">{{trans('clock.seconds')}}</p>
         <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" id="seconds"></div>
         </div>
 
-        <p class="lead">Minutes</p>
+        <p class="lead">{{trans('clock.minutes')}}</p>
         <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" id="minutes"></div>
         </div>
 
-        <p class="lead">Hours</p>
+        <p class="lead">{{trans('clock.hours')}}</p>
         <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="24" id="hours"></div>
         </div>
