@@ -14,7 +14,7 @@
             <span id="track">{{trans('music.loading')}}</span><br/>
             <span id="artist"></span><br/>
             <span id="album"></span>
-            <div id="album-art"></div>
+
         </div>
 
 
