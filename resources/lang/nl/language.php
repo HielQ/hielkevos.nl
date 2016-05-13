@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dutch' => 'Nederlands',
-    'english' => 'Engels'
-
+    'dutch' => 'Dutch',
+    'english' => 'English' ,
+    'german' => 'Duits' ,
 ];

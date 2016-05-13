@@ -23,35 +23,7 @@
 |
 */
 
-/**
- * Image viewing
- */
 
-Route::group(['prefix' => 's'] , function() {
-    Route::get('list' , ['middleware' => 'auth' , 'uses' => 'FileController@imagelist']);
-    Route::get('overview' , ['middleware' => 'auth' , 'uses' =>'FileController@imageoverview']);
-    Route::get('{image_name}' , 'ImageController@showImage');
-    Route::get('{image_name}/full' , 'ImageController@showFullImage');
-
-});
-
-/**
- *File and image uploading
- */
-
-Route::group(['[prefix' => 'u'] , function() {
-    Route::post('image' , 'FIleController@saveImage');
-    Route::post('file' , 'FileController@saveFile');
-});
-
-/**
- * file and image uploading
- */
-
-Route::group(['prefix' => 'f'] , function () {
-    Route::get('list' , ['middleware' => 'auth' , 'uses' => 'FileController@filelist']);
-    Route::get('{version}/{name}' , 'FileCOntroller@serve');
-});
 
 
 
@@ -65,6 +37,35 @@ Route::group(['prefix' => 'f'] , function () {
 
 Route::group(['middleware' => ['web' , 'locale']], function () {
     route::get('language/{locale}' , 'SessionController@saveLocale');
+    /**
+     * Image viewing
+     */
+
+    Route::group(['prefix' => 's'] , function() {
+        Route::get('list' , ['middleware' => 'auth' , 'uses' => 'FileController@imagelist']);
+        Route::get('overview' , ['middleware' => 'auth' , 'uses' =>'FileController@imageoverview']);
+        Route::get('{image_name}' , 'ImageController@showImage');
+        Route::get('{image_name}/full' , 'ImageController@showFullImage');
+
+    });
+
+    /**
+     *File and image uploading
+     */
+
+    Route::group(['[prefix' => 'u'] , function() {
+        Route::post('image' , 'FIleController@saveImage');
+        Route::post('file' , 'FileController@saveFile');
+    });
+
+    /**
+     * file and image uploading
+     */
+
+    Route::group(['prefix' => 'f'] , function () {
+        Route::get('list' , ['middleware' => 'auth' , 'uses' => 'FileController@filelist']);
+        Route::get('{version}/{name}' , 'FileCOntroller@serve');
+    });
 
     Route::get('/' , 'HomeController@index');
 //Route::get('/about' , 'HomeController@about');
@@ -73,7 +74,7 @@ Route::group(['middleware' => ['web' , 'locale']], function () {
     Route::get('/projects' , 'HomeController@projects');
     Route::get('/licenses' , 'HomeController@licenses');
     Route::get('/clock' , 'HomeController@clock');
-    Route::match(['GET' , 'POST'] , '/login' , 'UserController@login'); //TODO fix the messages
+    Route::match(['GET' , 'POST'] , '/login' , 'UserController@login');
     Route::get('logout' , ['middleware' => 'auth' , 'uses' => 'UserController@logout']);
 //Route::get('/contact' , 'HomeController@contact');
 

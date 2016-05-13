@@ -2,6 +2,8 @@
 
 return [
     'dutch' => 'Dutch',
-    'english' => 'English'
+    'english' => 'English' ,
+    'german' => 'German' ,
+
 
 ];

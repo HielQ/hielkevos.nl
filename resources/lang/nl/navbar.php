@@ -10,6 +10,11 @@ return [
     'login' => 'Inloggen' ,
     'licenses' => 'Licenties' ,
     'clock' => 'Klok' ,
+    'upload' => 'Uploaden',
+    'image_list' => 'Foto lijst' ,
+    'image_overview' => 'Foto overzicht' ,
+    'file_list' => 'Bestanden lijst',
+    'logout' => 'Uitloggen' ,
 
 
 ];
