@@ -228,7 +228,7 @@
                     var track = data.recenttracks.track[0];
                     if (typeof track['@attr'] != "undefined") {
                         // This code will be used if the user is currenly listening to something
-                        var prefix = "<div class='sp sp-wave'></div> &nbsp; {{trans('music.playing')}}";
+                        var prefix = "<i class='fa fa-play'></i> &nbsp; {{trans('music.playing')}}";
                     } else {
                         // If the user is not listening to anything, show the latest track that they listened to
                         var prefix = "<i class='fa fa-pause'></i> &nbsp; {{trans('music.recently')}}";
