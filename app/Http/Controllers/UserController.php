@@ -23,7 +23,7 @@ class UserController extends Controller
                     ]
                 )) return Redirect::intended('/')->with(
                     [
-                        'message' => trans('messages.login') ,
+                        'message' => trans('message.login') ,
                         'type' => 'success',
                         'glyphicon' => 'glyphicon glyphicon-ok'
                     ]
@@ -32,7 +32,7 @@ class UserController extends Controller
                     return Redirect::to('/login')->with(
                         [
                             'type' => 'danger',
-                            'message' => trans('message.login'),
+                            'message' => trans('message.false_password'),
                             'glyphicon' => 'glyphicon glyphicon-exclamation-sign'
                         ]
                     );
@@ -58,7 +58,7 @@ class UserController extends Controller
             Auth::logout();
             return Redirect::intended('/')->with(
                 [
-                    'message' => 'message.logout' , 'type' => 'success' , 'glyphicon' => 'glyphicon glyphicon-ok'
+                    'message' => trans('message.logout') , 'type' => 'success' , 'glyphicon' => 'glyphicon glyphicon-ok'
                 ]
             );
         } else
